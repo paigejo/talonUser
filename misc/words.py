@@ -154,12 +154,13 @@ keymap = {
     'twd': 'pwd',
     'two': 'to',
     'mouse': 'm',
-    'mouth': 'm',
+    'mouth': 'm', 
     'one': 'one',
     'jan': 'gen',
     'emily': 'MLE',
     'exchange ability': 'exchangeability',
     'halcyon': 'hessian',
+    'page (j oh | jail)': 'paigejo'
 }
 
 ctx.keymap(keymap)

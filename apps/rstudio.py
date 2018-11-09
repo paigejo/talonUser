@@ -85,7 +85,7 @@ ctx.keymap({
     'spring' + numerals: jump_to_bol,
     # 'trundle': toggle_comments,
     # 'trundle' + numerals: jump_to_bol_and(toggle_comments),
-    'trundle':         Key('cmd-shift-C'),
+    'trundle':         Key('cmd-shift-'),
     'reindent':         Key('cmd-i'),
 
   # base R functions
@@ -114,8 +114,9 @@ ctx.keymap({
 
   # finding
     'Find and Replace':       Key('cmd-f'),
-    'Find Next':        Key('cmd-g'),
-    'Find Previous':    Key('cmd-shift-G'),
+    '(Find Next | marneck)':        Key('cmd-g'),
+    '(Find Previous | marpreev)':    Key('cmd-shift-G'),
+    'replace': Key('cmd-shift-j'), 
 
 ##### PACKAGES
 

@@ -60,7 +60,7 @@ def rot13(i, word, _):
 formatters = {
     'dunder': (True,  lambda i, word, _: '__%s__' % word if i == 0 else word),
     'cram':  (True,  lambda i, word, _: word if i == 0 else word.capitalize()),
-    'crimp':  (True,  lambda i, word, _: word.capitalize()),
+    'criffed':  (True,  lambda i, word, _: word.capitalize()),
     'snake':  (True,  lambda i, word, _: word if i == 0 else '_'+word),
     'smash':  (True,  lambda i, word, _: word),
     'yellsmash': (True, lambda i, word, _: word.upper()),
@@ -114,7 +114,7 @@ ctx = Context('input')
 ctx.keymap({
     'say <dgndictation> [over]': text,
 
-    'sentence <dgndictation> [over]': sentence_text,
+    '(sentence | champ) <dgndictation> [over]': sentence_text,
     'comma <dgndictation> [over]': [', ', text],
     'period <dgndictation> [over]': ['. ', sentence_text],
     'more <dgndictation> [over]': [' ', text],
@@ -126,14 +126,14 @@ ctx.keymap({
 
     'slap': [Key('cmd-right enter')],
     'shock': [Key('enter')],
-    'question [mark]': '?',
+    '(question [mark] | questo)': '?',
     'tilde': '~',
     'skoosh': ' ',
     '(bang | exclamation point | clamor)': '!',
     'doodle': '..',
     'ellipsis': '...',
     '(dollar [sign] | dolly)': '$',
-    'downscore': '_',
+    '(downscore | crunder)': '_',
     'colon': ':',
     'coal gap': ': ',
     'swipe': ', ', 

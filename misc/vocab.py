@@ -223,6 +223,7 @@ ctx.vocab = [
     "pwd",
     "MLE",
     "latex"
+    'paigejo'
 ]
 
 ctx.vocab_remove = [
@@ -242,5 +243,6 @@ ctx.vocab_remove = [
     'P values',
 
     # 'tax',
+    'cuesta', 
 
 ]
