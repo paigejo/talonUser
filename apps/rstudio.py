@@ -4,6 +4,7 @@
 
 from talon.voice import Word, Context, Key, Rep, Str, press
 import time
+from talon import ctrl, tap
 
 ctx = Context('RStudio', bundle='org.rstudio.RStudio')
 
@@ -79,13 +80,24 @@ def jump_to_eol_and(then):
 def toggle_comments(*unneeded):
    Key('cmd-shift-c')
 
+# def toggle_comments(*unneeded):
+#     ctrl.key_press('cmd', down=True)
+#     ctrl.key_press('shift', down=True)
+#     time.sleep(0.032)
+#     ctrl.key_press('c', down=True)
+#     time.sleep(0.032)
+#     ctrl.key_press('c', down=False)
+#     time.sleep(0.032)
+#     ctrl.key_press('cmd', down=False)
+#     ctrl.key_press('shift', down=False)
+
 ctx.keymap({
 
 #### MOVING AROUND
     'spring' + numerals: jump_to_bol,
     # 'trundle': toggle_comments,
-    # 'trundle' + numerals: jump_to_bol_and(toggle_comments),
-    'trundle':         Key('cmd-shift-'),
+    'trundle' + numerals: jump_to_bol_and(toggle_comments),
+    'trundle':         Key('cmd-shift-c'),
     'reindent':         Key('cmd-i'),
 
   # base R functions
