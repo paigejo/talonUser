@@ -11,4 +11,16 @@ ctx.keymap({
     'new document': [Key('cmd-n')], 
     'marco': [Key('cmd-f')], 
     'olly': Key('cmd-a'), 
+    'sky koosh': Key('shift-space'), 
+    'prome': Key('home'), 
+    'prend': Key('end'), 
+    'dot calm': '.com', 
+    'dot edu': '.edu', 
+    'dot gov': '.gov', 
+    'quit this application': Key('cmd-q'), 
+    
+    'dose': '2', 
+    'quads': '4', 
+    'hundred': '00', 
+    'thousand': '000', 
 })

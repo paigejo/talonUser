@@ -3,7 +3,7 @@ import string
 
 # alpha_alt = 'ark bat cap die each fail gone harm sit jury crash look mad nerb odd pit quest red sun trap urge vest whale box yang zip'.split()
 # alpha_alt = 'air bat cap drum each fine gone harm sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yes zip'.split()
-alpha_alt = 'arch brov char dell etch fomp goof hark ice jay koop lugg mowsh nerb orc pooch quosh rosh sake teek unks verge womp trex yang zooch'.split()
+alpha_alt = 'arch brov char dell etch fomp goof hark ice jay koop lugg mowsh nerb orc pooch quosh rosh souk teek unks verge womp trex yang zooch'.split()
 
 f_keys = {f'F {i}': f'f{i}' for i in range(1, 13)}
 # arrows are separated because 'up' has a high false positive rate
@@ -18,7 +18,8 @@ symbols = {
     'tinker': '`',
     'comma': ',',
     'dot': '.',
-    'semi': ';', 'semicolon': ';',
+    # 'semi': ';', 
+    'semicolon': ';',
     'quote': "'",
     'L square': '[', 'left square': '[', 'square': '[',
     'R square': ']', 'right square': ']',
@@ -84,7 +85,7 @@ def press_keys(m):
 
 ctx = Context('basic_keys')
 ctx.keymap({
-    '(uppercase | ship | sky) {basic_keys.alphabet}+ [(lowercase | sunk | squash | lower)]': uppercase_letters,
+    '(uppercase | ship | sky | yeller | yellsmash) {basic_keys.alphabet}+ [(lowercase | sunk | squash | lower | smash)]': uppercase_letters,
     '{basic_keys.modifiers}* {basic_keys.alphabet}+': press_keys,
     '{basic_keys.modifiers}* {basic_keys.digits}+': press_keys,
     '{basic_keys.modifiers}* {basic_keys.keys}+': press_keys,

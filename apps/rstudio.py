@@ -98,7 +98,8 @@ ctx.keymap({
     # 'trundle': toggle_comments,
     'trundle' + numerals: jump_to_bol_and(toggle_comments),
     'trundle':         Key('cmd-shift-c'),
-    'reindent':         Key('cmd-i'),
+    '(reindent | indy)':         Key('cmd-i'),
+    'commie': '##### ', 
 
   # base R functions
     'get working directory':    ['getwd()', Key('left')],
@@ -109,6 +110,7 @@ ctx.keymap({
     '(assign that) | rambo':    Key('alt--'),
 
     'make function':     ['function {}', Key('left'), Key('enter')],
+    'do funny':     [' = function() {}', Key('left'), Key('enter'), Key('up'), Key('cmd-right'), Key('left'), Key('left'), Key('left')],
     'R data frame':     'data.frame(',
     'R tibble':         'tibble(',
 
@@ -172,4 +174,11 @@ ctx.keymap({
     # 'pipe': Key('cmd-shift-m'), ## RStudio's ' %>% '
     # 'pipe back': ' %<>% ',
     # 'pipe and': [' %>% ', Key('enter')],
+    
+    'iffy':     ['if() {}', Key('left'), Key('enter'), Key('up'), Key('right')],
+    'else iffy':     ['else if() {}', Key('left'), Key('enter'), Key('up'), Key('right'), Key('right'), Key('right'), Key('right'), Key('right'), Key('right')],
+    'elsie':     ['else {}', Key('left'), Key('enter')],
+    
+    'do for': ['for() {}', Key('left'), Key('enter'), Key('up'), Key('right'), Key('right')],
+    'do for I': ['for() {}', Key('left'), Key('enter'), Key('up'), Key('right'), Key('right'), 'i in 1:'],
 })

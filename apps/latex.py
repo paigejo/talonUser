@@ -4,7 +4,7 @@
 from talon.voice import Word, Context, Key, Rep, Str, press
 import time
 
-ctx = Context('latex', func=lambda app, win: app.bundle in ('TeXShop', 'org.rstudio.RStudio'))
+ctx = Context('latex', func=lambda app, win: app.bundle in ('TeXShop', 'org.rstudio.RStudio', 'fr.chachatelier.pierre.LaTeXiT'))
 
 ctx.keymap({
   
@@ -56,7 +56,7 @@ ctx.keymap({
     "math approximate": " \\approx ", 
     "math left": " \\left ", 
     "math right": " \\right ", 
-    "math item": " \\item ", 
+    "math item": "\\item ", 
     
     "rig prex": ["\\left ( \\right )", Key('left'), Key('left'), Key('left'), 
                  Key('left'), Key('left'), Key('left'), Key('left'), Key('left'), 
@@ -179,7 +179,7 @@ ctx.keymap({
     'tecker math bb': ['\\mathbb{}', Key('left')], 
     'tecker frak': ['\\frac{}', Key('left')], 
     'tecker partial': ['\\frac{\\partial}{\\partial }', Key('left')], 
-    'tecker math cal': ['\\cal{}', Key('left')], 
+    'tecker math cal': ['\\mathcal{}', Key('left')], 
     'tecker exp': ['\\exp{}', Key('left')], 
     'tecker subsection': ['\\subsection{}', Key('left')], 
     'tecker image': ['\\image{}', Key('left')], 
@@ -248,7 +248,7 @@ ctx.keymap({
     'begin bmatrix': ['\\begin{bmatrix}\n\\end{bmatrix}', Key('up'), Key('cmd-right'), '\n'], 
     'begin cases': ['\\begin{cases}\n\\end{cases}', Key('up'), Key('cmd-right'), '\n'], 
     'begin comment': ['\\begin{comment}\n\\end{comment}', Key('up'), Key('cmd-right'), '\n'], 
-    'begin lstlisting': ['\\begin{lstlisting}\n\\end{lstlisting}', Key('up'), Key('cmd-right'), '\n'], 
+    'begin lst listing': ['\\begin{lstlisting}\n\\end{lstlisting}', Key('up'), Key('cmd-right'), '\n'], 
     'begin center': ['\\begin{center}\n\\end{center}', Key('up'), Key('cmd-right'), '\n'], 
     'begin theorem': ['\\begin{theorem}\n\\end{theorem}', Key('up'), Key('cmd-right'), '\n'], 
     'begin definition': ['\\begin{definition}\n\\end{definition}', Key('up'), Key('cmd-right'), '\n'], 

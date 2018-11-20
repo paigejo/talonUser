@@ -160,7 +160,9 @@ keymap = {
     'emily': 'MLE',
     'exchange ability': 'exchangeability',
     'halcyon': 'hessian',
-    'page (j oh | jail)': 'paigejo'
+    'page (j oh | jail)': 'paigejo',
+    'nully': 'null',
+    
 }
 
 ctx.keymap(keymap)
